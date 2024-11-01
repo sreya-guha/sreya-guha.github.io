@@ -1,7 +1,77 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <style>
+      p {
+        word-wrap: break-word;
+        width: 600px;
+        padding-left: 10px;
+        text-align: left; /* Ensure text is left-aligned */
+      }
+
+      .profile-container {
+        display: flex;
+        gap: 20px; /* Space between image and text */
+        align-items: flex-start; /* Align items at the top */
+      }
+
+      .profile-container .image-container {
+        margin-top: 20px;
+        flex-shrink: 0; /* Prevent the image container from shrinking */
+      }
+
+      .profile-container img {
+        width: auto;  /* Maintain aspect ratio */
+      }
+
+      .profile-container div {
+        text-align: left; /* Ensure the text stays left-aligned */
+      }
+    </style>
+
+    <title>Sreya Guha</title>
+</head>
+<body>
+
+<div id="layout-content">
+        <div id="toptitle">
+            <h1>Sreya Guha</h1>
+        </div>
+        <div class="profile-container">
+          <div class="image-container">
+            <img id="profile-image" src="https://storage.googleapis.com/www.sreyaguha.net/profile.jpg" alt="Sreya Guha" />
+          </div>
+          <div id="profile-text">
+            <p>
+              I am currently a product manager at <a href="https://www.beremarkable.ai/">Remarkable AI</a> (formerly Chatdesk). 
+            </p>
+            <p>
+              I have a master's in Computer Science from Stanford University. I completed my B.S. in Symbolic Systems, an interdisciplinary major combining computer science, philosophy, linguistics, and psychology from Stanford.
+            </p>
+            <p>
+               In my time at Stanford, I wrote a <a href="https://purl.stanford.edu/hn011kb3770">thesis</a> on Parler and the effect of deplatforming on extremist communities. I interned at the Santa Clara Public Defender's Office and the Stanford Computer Science Department. I also worked as a research assistant studying technology policy and digital rights at the <a href="https://cyber.fsi.stanford.edu/gdpi">Global Digital Policy Incubator</a> and as an extern at the <a href ="https://cdt.org/">Center for Democracy and Technology</a>.
+            </p>
+            <br/>
+            <p>
+              <a href="SreyaGuhaPMResumeOct2024.pdf">Resume</a> <br />
+              Contact: sreya [at] guha (dot) com
+            </p>
+          </div>
+        </div>
+
+    <hr>
+
+    <script>
+      window.onload = function() {
+        // Get the height of the profile text
+        var textHeight = document.getElementById('profile-text').offsetHeight;
+        
+        // Apply the text height to the image
+        document.getElementById('profile-image').style.height = textHeight + 'px';
+      };
+    </script>
+
+</body>
 </html>
